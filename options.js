@@ -1,7 +1,14 @@
 let page = document.getElementById("buttonDiv");
 let selectedClassName = "current";
-const presetButtonColors = ["#3aa757", "#e8453c", "#f9bb2d", "#4688f1"];
-
+const randomButtonColors = [];
+// Make six random colors for options
+for (let i = 0; i < 6; i++) {
+  var randomColor = Math.floor(Math.random() * 16777215).toString(16);
+  var hexColor = "#" + randomColor;
+  console.log({ hexColor });
+  randomButtonColors.push(hexColor);
+}
+console.log(randomButtonColors);
 // Reacts to a button click by marking the selected button and saving
 // the selection
 function handleButtonClick(event) {
@@ -43,4 +50,4 @@ function constructOptions(buttonColors) {
 }
 
 // Initialize the page by constructing the color options
-constructOptions(presetButtonColors);
+constructOptions(randomButtonColors);
