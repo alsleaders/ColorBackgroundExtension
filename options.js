@@ -2,13 +2,12 @@ let page = document.getElementById("buttonDiv");
 let selectedClassName = "current";
 const randomButtonColors = [];
 // Make six random colors for options
-for (let i = 0; i < 6; i++) {
+for (let i = 0; i < 5; i++) {
   var randomColor = Math.floor(Math.random() * 16777215).toString(16);
   var hexColor = "#" + randomColor;
-  console.log({ hexColor });
   randomButtonColors.push(hexColor);
 }
-console.log(randomButtonColors);
+
 // Reacts to a button click by marking the selected button and saving
 // the selection
 function handleButtonClick(event) {
